@@ -12,6 +12,10 @@ def get_user_data():
         "donations": 2000
     })
 
+# ✅ Move this above the __main__ block
+@app.route('/')
+def home():
+    return {"message": "Backend is running!"}
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=10000)
-
